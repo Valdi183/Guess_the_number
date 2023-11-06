@@ -1,0 +1,14 @@
+import random
+
+# Genera un número aleatorio entre 0 y 99.
+numero_a_adivinar = random.randint(0, 99) 
+
+#Esto nos aparecerá en consola como introducción al juego.
+print("¡Bienvenido al juego de adivinar el número!") 
+print("Introduce un número del 0 al 99 e intenta adivinar el número.") 
+intento = int(input("Introduce tu suposición: "))
+
+if intento == numero_a_adivinar: 
+    print(f"¡Correcto! {numero_a_adivinar}.")
+else:
+    print(f"¡Buen intento! el número correcto era {numero_a_adivinar}.")

@@ -1,0 +1,22 @@
+import random
+
+# Genera un número aleatorio entre 0 y 99.
+numero_a_adivinar = random.randint(0, 99) 
+
+intentos = 0 
+#Esto nos aparecerá en consola como introducción al juego.
+print("¡Bienvenido al juego de adivinar el número!") 
+print("Estoy pensando en un número entre 0 y 99.") 
+
+while True:
+    intento = int(input("Introduce tu suposición: ")) #Se trata de un mensaje con un input para introducir un numero al azar y e intentar adivinar el número.
+    intentos += 1  #Aquí asignamos una variable al número de intentos, que nos mostrará una vez haya terminado el juego
+
+    if intento < numero_a_adivinar: #Se comparan ambas variables, la del intento (número introducido) y el número pensado por la máquina.
+        print("Te quedaste corto. Intenta un número mayor.") #Al ser el número introducido menor, este mensaje nos lo hace saber para que nos aproximemos más a ese número.
+    elif intento > numero_a_adivinar: #Se vuelven a comparar ambas variables, pero esta vez, si la que hemos introducido nosotros es mayor.
+        print("Te pasaste. Prueba con un número menor.") 
+    else:
+        print(f"¡Correcto! Adivinaste el número {numero_a_adivinar} en {intentos} intentos.") 
+        break #Fin del juego, (si no lo pusieramos haríamos un bucle)
+
